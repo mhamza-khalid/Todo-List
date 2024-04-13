@@ -33,10 +33,22 @@ form.addEventListener('submit', handleToDoSubmit)
 form.addEventListener('submit', handlePlusClick);
 
 //on project click
-
 window.addEventListener('click', (event)=>{
     if(event.target.className == "projectButton"){
+
+        //display todos of clicked project
         handleProjectClick(event);
+
+        //add background color to selected project
+        let buttons = document.querySelectorAll('.projectButton')
+        buttons.forEach((button)=>{
+            button.style.backgroundColor = '#d3d3d3';
+        })
+        event.target.style.backgroundColor = '#a8d9da'
     }
 })
+
+
+
+
 

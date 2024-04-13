@@ -47,8 +47,6 @@ function display(array, index){
         card.appendChild(thirdRow);
 
         todos.appendChild(card);
-
-        ++objectNumber
     })
 }
 

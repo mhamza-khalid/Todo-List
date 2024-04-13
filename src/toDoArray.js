@@ -9,7 +9,7 @@ let toDoArray = [
     [
         {
             title: "Gym",
-            priority: "High",
+            priority: "Medium",
             dueDate: "2-12-24",
             description: "Its Leg Day"
         },
@@ -18,6 +18,12 @@ let toDoArray = [
             priority: "Medium",
             dueDate: "2-10-24",
             description: "Fix bugs"
+        },
+        {
+            title: "Feed the cat",
+            priority: "High",
+            dueDate: "2-12-24",
+            description: "Treat also!"
         }
     ]
 ];

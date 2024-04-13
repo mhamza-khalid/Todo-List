@@ -1,13 +1,14 @@
 header{
-    max-width: 800px;
+    max-width: 1200px;
     margin: 1rem auto;
+    font-size: 44px;
 }
 
 
 #container{
     display: flex;
-    gap: 100px;
-    max-width: 800px;
+    gap: 35px;
+    max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -18,15 +19,35 @@ header{
     gap: 1em;
 }
 
+button{
+    font-size: 20px;
+}
 
-#addToDo{
-    background-color: aqua;
+input{
+    font-size: 20px;
+}
+
+.modal{
+    font-size: 28px;
+}
+
+#description{
+    font-size: 22px;
+}
+
+#priority{
+    font-size: 22px;
+}
+
+
+#addToDo {
+    /* background-color: aqua; */
     height: fit-content;
-    width: fit-content;
-
-    font-size: 12px;
+    /* width: fit-content; */
+    font-size: 20px;
     border: 0;
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
+    border: 1px solid black;
 }
 
 #addToDo:hover{
@@ -38,17 +59,17 @@ form{
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
-    gap: 1em;
+    gap: 0.5em;
     
 }
 
 .todoCard {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     border: 2px solid grey;
     padding: 0.5rem;
-    max-width: 450px;
+    font-size: 26px;
 }
 
 .firstRow{
@@ -73,3 +94,5 @@ form{
     flex-direction: column;
     gap: 2rem;
 }
+
+
