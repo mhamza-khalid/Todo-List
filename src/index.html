@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>Todo List</header>
+    <header><div>Todo List</div></header>
 
     <div id="container">
         <div id="projects">
-            <button number="0">Default Project</button>
+            <button class="projectButton" number="0">Default Project</button>
             <form id="addProjectForm">
                 <input required type="text" placeholder="Add New Project" id="inputProject">
                 <button type="submit">Add Project</button>
@@ -20,6 +20,32 @@
         <div id="todos">
 
         </div>
+
+        <button id="addToDo">Add New ToDo</button>
+
+        <dialog class="modal" id="modal">
+        
+            <form class="form" method="dialog">
+              <label for="title">Title: <input required id="title" type="text"></label>
+              <label for="priority"> Priority:
+                <select required  id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="High">High</option>
+                  </select>
+              </label>
+              
+              <label for="description">Decription:</label>
+              <textarea required id="description" placeholder="Decribe what you want to do"></textarea>
+              
+              <label for="dueDate">Due Date:
+                <input required type="date" id="dueDate">
+              </label>
+              
+              <button class="button" type="submit">Submit item</button>
+            </form>
+          
+        </dialog>
     </div>
 </body>
 </html>

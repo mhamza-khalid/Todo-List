@@ -9,6 +9,7 @@ function handleSubmit(event){
 
     let newProject = document.createElement('button');
     newProject.setAttribute('number', number);
+    newProject.classList.add('projectButton')
 
     ++number;
 

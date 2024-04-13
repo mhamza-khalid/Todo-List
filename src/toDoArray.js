@@ -1,6 +1,9 @@
 // this module contains the parent toDoArray 
 // and will add an array to it when form is submited
 // each sub array represents a project
+import { display } from "./displayFunction";
+
+let todos = document.querySelector('#todos')
 
 let toDoArray = [
     [
@@ -19,10 +22,33 @@ let toDoArray = [
     ]
 ];
 
-function addProject(){
+function addProject(event){
+    event.preventDefault();
     toDoArray.push([]);
     console.log(toDoArray);
 }
 
-export {addProject};
+function addToDo(index,object){
+
+    toDoArray[index].push(object)
+
+}
+
+function getToDoArray(){
+
+    return toDoArray;
+
+}
+
+function deleteItem(){
+
+}
+
+function onLoad(){
+    window.addEventListener('load', ()=>{
+        display(toDoArray, 0);
+    })
+}
+
+export {addProject, onLoad, addToDo, getToDoArray, deleteItem};
 
