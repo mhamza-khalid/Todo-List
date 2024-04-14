@@ -27,15 +27,17 @@ input{
     font-size: 20px;
 }
 
-.modal{
+.edit--modal,
+.modal {
     font-size: 28px;
 }
 
-#description{
+
+#description, #edit--description{
     font-size: 22px;
 }
 
-#priority{
+#priority, #edit--priority{
     font-size: 22px;
 }
 
@@ -55,13 +57,13 @@ input{
     background-color: rgb(193, 215, 208);
 }
 
-form{
+form, .edit--form{
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
     gap: 0.5em;
-    
 }
+
 
 .todoCard {
     display: flex;

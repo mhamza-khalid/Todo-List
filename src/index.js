@@ -8,6 +8,7 @@ import { handlePlusClick } from "./displayToDos";
 import { handleProjectClick } from "./displayToDos";
 
 import { deleteItem } from "./deleteItem";
+import { editTodo } from "./editItem";
 
 
 let deleteButton;
@@ -63,6 +64,19 @@ window.addEventListener('mouseover', (event)=>{
         deleteButton.forEach((button)=>{
 
             button.addEventListener('click', deleteItem)
+
+        })
+    }
+})
+
+window.addEventListener('click', (event)=>{
+
+    if(event.target.className == 'edit'){ 
+        let editButton = document.querySelectorAll('.edit');
+
+        editButton.forEach((button)=>{
+
+            button.addEventListener('click', editTodo(event))
 
         })
     }

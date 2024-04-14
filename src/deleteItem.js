@@ -29,7 +29,7 @@ function deleteItem(event){
     for (let i = 0 ; i < children.length; ++i){
 
         // check at which subindex (i) this card was in todoarray[index]
-        // and remove it from todoarray and call display again for re render
+        // and remove it from todoarray and call display again for rerender
         if( children[i] === parent){
 
             console.log(i);

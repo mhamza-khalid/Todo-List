@@ -46,6 +46,30 @@
             </form>
           
         </dialog>
+
+        <dialog class="edit--modal" id="edit--modal">
+        
+            <form class="edit--form" method="dialog">
+              <label for="edit--title">Title: <input required id="edit--title" type="text"></label>
+              <label for="edit--priority"> Priority:
+                <select required  id="edit--priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                  </select>
+              </label>
+              
+              <label for="edit--description">Decription:</label>
+              <textarea required id="edit--description" placeholder="Decribe what you want to do"></textarea>
+              
+              <label for="edit--dueDate">Due Date:
+                <input required type="date" id="edit--dueDate">
+              </label>
+              
+              <button class="button" type="edit--submit">Submit item</button>
+            </form>
+          
+        </dialog>
     </div>
 </body>
 </html>

@@ -3,26 +3,26 @@
 // each sub array represents a project
 import { display } from "./displayFunction";
 
-let todos = document.querySelector('#todos')
+
 
 let toDoArray = [
     [
         {
             title: "Gym",
             priority: "Medium",
-            dueDate: "2-12-24",
+            dueDate: "2024-04-10",
             description: "Its Leg Day",
         },
         {
             title: "Work on Project",
             priority: "Medium",
-            dueDate: "2-10-24",
+            dueDate: "2024-04-12",
             description: "Fix bugs"
         },
         {
             title: "Feed the cat",
             priority: "High",
-            dueDate: "2-12-24",
+            dueDate: "2024-04-24",
             description: "Treat also!"
         }
     ]
@@ -50,6 +50,7 @@ function getToDoArray(){
 function deleteObject(index, subIndex){
 
     toDoArray[index].splice(subIndex,1)
+    
 }
 
 function onLoad(){
