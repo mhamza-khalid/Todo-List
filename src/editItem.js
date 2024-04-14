@@ -36,8 +36,7 @@ function editTodo(event){
 
     for (let i = 0 ; i < children.length; ++i){
 
-        // check at which subindex (i) this card was in todoarray[index]
-        // and remove it from todoarray and call display again for re render
+        // on edit clicked, i contains the index of object in tododarray
         if( children[i] === parent){
 
             let array = getToDoArray();
@@ -48,13 +47,14 @@ function editTodo(event){
             description.value = array[index][i].description;
             dueDate.value = array[index][i].dueDate;
 
-            // deleteObject(index,i);
             break;
             
         }
 
         
     }
+
+
     let form = document.querySelector('.edit--form');
 
             form.addEventListener('submit', (event)=>{
@@ -62,6 +62,7 @@ function editTodo(event){
             event.preventDefault();
             let array = getToDoArray();
 
+            //add edited values to todoarray and trigger and re render the display
             array[index][editIndex].title = title.value;
             array[index][editIndex].priority = priority.value;
             array[index][editIndex].description = description.value;
