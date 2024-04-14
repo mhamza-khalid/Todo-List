@@ -7,6 +7,10 @@ import { handleToDoSubmit } from "./createObject";
 import { handlePlusClick } from "./displayToDos";
 import { handleProjectClick } from "./displayToDos";
 
+import { deleteItem } from "./deleteItem";
+
+
+let deleteButton;
 //adds a new project when user hits add project
 let projectForm = document.querySelector('#addProjectForm');
 projectForm.addEventListener('submit', handleSubmit);
@@ -32,6 +36,8 @@ form.addEventListener('submit', handleToDoSubmit)
 
 form.addEventListener('submit', handlePlusClick);
 
+
+
 //on project click
 window.addEventListener('click', (event)=>{
     if(event.target.className == "projectButton"){
@@ -47,6 +53,23 @@ window.addEventListener('click', (event)=>{
         event.target.style.backgroundColor = '#a8d9da'
     }
 })
+
+
+window.addEventListener('mouseover', (event)=>{
+
+    if(event.target.className == 'delete'){ 
+        deleteButton = document.querySelectorAll('.delete');
+
+        deleteButton.forEach((button)=>{
+
+            button.addEventListener('click', deleteItem)
+
+        })
+    }
+})
+
+
+
 
 
 

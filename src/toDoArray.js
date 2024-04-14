@@ -11,7 +11,7 @@ let toDoArray = [
             title: "Gym",
             priority: "Medium",
             dueDate: "2-12-24",
-            description: "Its Leg Day"
+            description: "Its Leg Day",
         },
         {
             title: "Work on Project",
@@ -31,12 +31,13 @@ let toDoArray = [
 function addProject(event){
     event.preventDefault();
     toDoArray.push([]);
-    console.log(toDoArray);
+    
 }
 
 function addToDo(index,object){
 
     toDoArray[index].push(object)
+    console.log(toDoArray);
 
 }
 
@@ -46,8 +47,9 @@ function getToDoArray(){
 
 }
 
-function deleteItem(){
+function deleteObject(index, subIndex){
 
+    toDoArray[index].splice(subIndex,1)
 }
 
 function onLoad(){
@@ -56,5 +58,5 @@ function onLoad(){
     })
 }
 
-export {addProject, onLoad, addToDo, getToDoArray, deleteItem};
+export {addProject, onLoad, addToDo, getToDoArray, deleteObject};
 

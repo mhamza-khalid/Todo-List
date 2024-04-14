@@ -4,6 +4,8 @@ let form = document.querySelector('.form');
 let todo;
 let index = 0;
 
+
+
 window.addEventListener('click', (event)=>{
     
     if(event.target.className == 'projectButton'){

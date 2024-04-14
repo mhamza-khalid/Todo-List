@@ -8,7 +8,6 @@ window.addEventListener('click', (event)=>{
     
     if(event.target.className == 'projectButton'){
         index = event.target.getAttribute("number");
-        console.log(index);
     }
 })
 
