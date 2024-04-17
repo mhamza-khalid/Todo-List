@@ -39,7 +39,7 @@ function editTodo(event){
         // on edit clicked, i contains the index of object in tododarray
         if( children[i] === parent){
 
-            let array = getToDoArray();
+            let array = JSON.parse(localStorage.getItem("todoArray"));
             editIndex = i;
 
             title.value = array[index][i].title;
@@ -60,8 +60,9 @@ function editTodo(event){
             form.addEventListener('submit', (event)=>{
 
             event.preventDefault();
-            let array = getToDoArray();
-
+            // let array = getToDoArray();
+            
+            let array = JSON.parse(localStorage.getItem("todoArray"));
             //add edited values to todoarray and trigger and re render the display
             array[index][editIndex].title = title.value;
             array[index][editIndex].priority = priority.value;
@@ -69,6 +70,7 @@ function editTodo(event){
             array[index][editIndex].dueDate = dueDate.value;
 
             todos.textContent = '';
+            localStorage.setItem("todoArray", JSON.stringify(array))
             display(array, index);
             modal.close();
             

@@ -1,10 +1,10 @@
 import { addToDo } from "./toDoArray";
+import { populateToDoArrayStorage } from "./localStorage";
+
 let form = document.querySelector('.form');
 
 let todo;
 let index = 0;
-
-
 
 window.addEventListener('click', (event)=>{
     
@@ -25,6 +25,7 @@ function handleToDoSubmit(){
     console.log(todo);
 
     addToDo(index, todo);
+    populateToDoArrayStorage(index,todo);
     form.reset();
 }
 

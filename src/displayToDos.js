@@ -20,16 +20,18 @@ function handlePlusClick(){
 
     todos.textContent = '';
 
-    let toDoArray = getToDoArray();
+    //let toDoArray = getToDoArray();
+
+    let toDoArray = JSON.parse(localStorage.getItem("todoArray"));
 
     display(toDoArray, index);
-    
+
 }
 
 function handleProjectClick(event){
 
     let number = event.target.getAttribute('number');
-    let toDoArray = getToDoArray();
+    let toDoArray = JSON.parse(localStorage.getItem("todoArray"));
 
     todos.textContent = '';
 

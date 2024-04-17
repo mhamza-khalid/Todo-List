@@ -7,31 +7,12 @@ import { display } from "./displayFunction";
 
 let toDoArray = [
     [
-        {
-            title: "Gym",
-            priority: "Medium",
-            dueDate: "2024-04-10",
-            description: "Its Leg Day",
-        },
-        {
-            title: "Work on Project",
-            priority: "Medium",
-            dueDate: "2024-04-12",
-            description: "Fix bugs"
-        },
-        {
-            title: "Feed the cat",
-            priority: "High",
-            dueDate: "2024-04-24",
-            description: "Treat also!"
-        }
+        
     ]
 ];
 
-function addProject(event){
-    event.preventDefault();
+function addProject(){
     toDoArray.push([]);
-    
 }
 
 function addToDo(index,object){
@@ -49,15 +30,15 @@ function getToDoArray(){
 
 function deleteObject(index, subIndex){
 
-    toDoArray[index].splice(subIndex,1)
+    // toDoArray[index].splice(subIndex,1)
+
+    let array = JSON.parse(localStorage.getItem("todoArray"));
+    array[index].splice(subIndex,1)
+    localStorage.setItem("todoArray", JSON.stringify(array))
     
 }
 
-function onLoad(){
-    window.addEventListener('load', ()=>{
-        display(toDoArray, 0);
-    })
-}
 
-export {addProject, onLoad, addToDo, getToDoArray, deleteObject};
+
+export {addProject, addToDo, getToDoArray, deleteObject};
 

@@ -37,11 +37,12 @@ function deleteItem(event){
             subindex = i;
             deleteObject(index, subindex)
 
-            let todoArray = getToDoArray();
+            // let todoArray = getToDoArray();
+            let array = JSON.parse(localStorage.getItem("todoArray"));
 
             todos.textContent = '';
             
-            display(todoArray, index);
+            display(array, index);
 
         }
     }

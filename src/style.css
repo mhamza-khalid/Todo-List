@@ -97,4 +97,38 @@ form, .edit--form{
     gap: 2rem;
 }
 
+.projectButton{
+    width: 100%;
+}
 
+.project{
+    display: flex;
+}
+
+
+#projectButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+@media screen and (max-width: 1066px) {
+    #container{
+        display: block;
+    }
+    body{
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    #addToDo{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+  }
+
+@media screen and (max-width: 570px) {
+  .firstRow, .secondRow{
+    display: block;
+  }
+}
