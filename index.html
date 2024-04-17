@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><div>Todo List</div></header>
+
+    <div id="container">
+        <div id="projects">
+              <button class="projectButton" id="default" number="0">Default Project</button>
+            <div id="projectButtons">
+              
+            </div>
+            <form id="addProjectForm">
+                <input required type="text" placeholder="Add New Project" id="inputProject">
+                <button type="submit">Add Project</button>
+            </form>
+        </div>
+        <div id="todos">
+
+        </div>
+
+        <button id="addToDo">Add New Todo Item</button>
+
+        <dialog class="modal" id="modal">
+        
+            <form class="form" method="dialog">
+              <label for="title">Title: <input required id="title" type="text"></label>
+              <label for="priority"> Priority:
+                <select required  id="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                  </select>
+              </label>
+              
+              <label for="description">Decription:</label>
+              <textarea required id="description" placeholder="Decribe what you want to do"></textarea>
+              
+              <label for="dueDate">Due Date:
+                <input required type="date" id="dueDate">
+              </label>
+              
+              <button class="button" type="submit">Submit item</button>
+            </form>
+          
+        </dialog>
+
+        <dialog class="edit--modal" id="edit--modal">
+        
+            <form class="edit--form" method="dialog">
+              <label for="edit--title">Title: <input required id="edit--title" type="text"></label>
+              <label for="edit--priority"> Priority:
+                <select required  id="edit--priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                  </select>
+              </label>
+              
+              <label for="edit--description">Decription:</label>
+              <textarea required id="edit--description" placeholder="Decribe what you want to do"></textarea>
+              
+              <label for="edit--dueDate">Due Date:
+                <input required type="date" id="edit--dueDate">
+              </label>
+              
+              <button class="button" type="edit--submit">Submit item</button>
+            </form>
+          
+        </dialog>
+    </div>
+<script defer src="index.bundle.js"></script></body>
+</html>
