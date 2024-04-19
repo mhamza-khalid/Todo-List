@@ -3,6 +3,7 @@ import './style.css';
 import { populateProjectsStorage } from './localStorage';
 import { loadProjectsFromStorage } from './localStorage';
 
+import { addProjectArray } from "./localStorage";
 // let parent = document.querySelector('#projects');
 // let projectForm = document.querySelector('#addProjectForm');
 // let number = 1;  // number attribute
@@ -24,6 +25,7 @@ function handleSubmit(event){
     populateProjectsStorage(projectName);
 
     parent.textContent = '';
+    addProjectArray();
     loadProjectsFromStorage();
 
     // newProject.textContent = projectName;

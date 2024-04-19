@@ -97,8 +97,12 @@ form, .edit--form{
     gap: 2rem;
 }
 
-.projectButton{
+.projectButton {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
 }
 
 .project{

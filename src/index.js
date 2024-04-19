@@ -1,6 +1,5 @@
 import { handleSubmit } from "./addProject"; //manipulates the DOM
-import { addProject } from "./toDoArray";
-import { onLoad } from "./toDoArray";
+
 import { handleModal } from "./addToDo";
 import { handleToDoSubmit } from "./createObject";
 
@@ -14,6 +13,8 @@ import { loadProjectsFromStorage } from "./localStorage";
 import { display } from "./displayFunction";
 
 import { changeColor } from "./projectColor";
+import { removeProjectFromStorage } from "./localStorage";
+
 
 
 let deleteButton;
@@ -87,6 +88,13 @@ window.addEventListener('click', (event)=>{
 })
 window.addEventListener('load', loadProjectsFromStorage)
 
+
+window.addEventListener('click', (event)=>{
+    if(event.target.className == 'deleteButton'){
+        removeProjectFromStorage(event);
+    }
+})
+
 //on loading page display Default Project Folder
 window.addEventListener('load', ()=>{
 
@@ -125,18 +133,6 @@ window.addEventListener('load', ()=>{
     display(array, 0);
 })
 
-
-
-
-
-
-
-        // //add background color to selected project
-        // let buttons = document.querySelectorAll('.projectButton')
-        // buttons.forEach((button)=>{
-        //     button.style.backgroundColor = '#d3d3d3';
-        // })
-        // event.target.style.backgroundColor = '#a8d9da'
 
 
 

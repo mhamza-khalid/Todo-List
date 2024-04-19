@@ -24,7 +24,7 @@ function handleToDoSubmit(){
     todo = createTodoObject(title, priority, description, dueDate);
     console.log(todo);
 
-    addToDo(index, todo);
+    // addToDo(index, todo);
     populateToDoArrayStorage(index,todo);
     form.reset();
 }
